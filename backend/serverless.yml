@@ -1,0 +1,44 @@
+service: forum-backend
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+
+functions:
+  api:
+    handler: lambda.handler
+    events:
+      - http:
+          path: /post/{id}
+          method: ANY
+          cors:
+            origins: "https://www.forum.markbagby.net"
+      - http:
+          path: /post
+          method: ANY
+          cors:
+            origins: "https://www.forum.markbagby.net"
+      - http:
+          path: /posts
+          method: ANY
+          cors:
+            origins: "https://www.forum.markbagby.net"
+      - http:
+          path: /comment
+          method: ANY
+          cors:
+            origins: "https://www.forum.markbagby.net"
+      - http:
+          path: /comments
+          method: ANY
+          cors:
+            origins: "https://www.forum.markbagby.net"
+      - http:
+          path: /user
+          method: ANY
+          cors:
+            origins: "https://www.forum.markbagby.net"
