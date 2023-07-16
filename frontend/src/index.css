@@ -223,6 +223,11 @@ p {
   color: var(--textNormal);
 }
 
+a {
+  color: var(--headerPrimary);
+}
+
+
 
 .profilePicture {
   width: 2.5rem;
@@ -375,7 +380,7 @@ input, input:active, textarea {
   padding: 0.5rem 0;
 }
 
-.username, .username a {
+.username {
   color: var(--headerPrimary);
 }
 
@@ -524,6 +529,9 @@ input, input:active, textarea {
   text-decoration: underline;
 }
 
+.mTop {
+  margin-top: 5rem;
+}
 
 .listEnd {
   min-height: 1rem;
